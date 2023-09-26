@@ -1,0 +1,13 @@
+[leetcode]
+base_url = "https://leetcode.com/"
+login_page = "https://leetcode.com/accounts/login/"
+user = ""
+password = ""
+
+[github]
+api_base_url = "https://api.github.com/repos/"
+access_token = ""
+owner = ""
+repo = ""
+branch = ""
+directory = ""

@@ -1,0 +1,12 @@
+.vscode/
+__pycache__/
+*venv/
+*.log
+config.toml
+
+build/
+dist/
+sdist/
+wheels/
+*.egg
+*.egg-info

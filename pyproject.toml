@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lcws"
+version = "1.0.0"
+description = "Scrape LeetCode and automatically upload your solutions to GitHub."
+requires-python = ">=3.11"
+authors = [{ "name" = "Ismail El-Toukhy", email = "ismail325m@gmail.com" }]
+dependencies = ["requests==2.31.0", "rich-click==1.6.1", "selenium==4.12.0"]
+
+[project.scripts]
+lcws = "lcws.main:cli"
+
+[tool.setuptools.packages.find]
+include = ["lcws*"]
+
+[tool.setuptools.package-data]
+"lcws.data" = ["*.json"]
+"lcws.config" = ["*.toml"]
