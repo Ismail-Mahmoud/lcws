@@ -59,7 +59,7 @@ def cli(url, browser, show, timeout, problem_url, submission_url):
         problem.solution_code, problem.solution_language = scraper.fetch_solution_details()
         console.log("[bold cyan]Solution Language:",
                     problem.solution_language)
-        console.log(problem.solution_code)
+        console.log(problem.solution_code, markup=False)
 
     solution_filename = prompt(
         style("Solution file name:", fg="yellow"),
