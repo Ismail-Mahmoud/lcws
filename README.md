@@ -56,3 +56,6 @@ For help, run:
 ```bash
 lcws --help
 ```
+
+# Demo
+![a](https://i.imgur.com/8liGxf8.gif)
