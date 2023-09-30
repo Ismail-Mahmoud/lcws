@@ -34,7 +34,7 @@ Under `leetcode` section, set the following values:
 
 ### GitHub
 Under `github` section, set the following values:
-1. `api_base_url`: GITHUB API base URL (set by default)
+1. `api_base_url`: GitHub API base URL (set by default)
 2. `access_token`: Your GitHub access token*
 3. `owner`: Your GitHub username
 4. `repo`: Name of the repo to which the solution will be uploaded
@@ -50,7 +50,7 @@ lcws <URL>
 ```
 where `URL` is a valid URL of one of the following:
 1. LeetCode problem (`https://leetcode.com/problems/<problem-name>/`). In this case, the last accepted submission will be fetched.
-2. LeetCode submission (`https://leetcode.com/problems/<problem-name>/submissions/<submission-id>/`)
+2. LeetCode submission (`https://leetcode.com/problems/<problem-name>/submissions/<submission-id>/`).
 
 For help, run:
 ```bash
@@ -59,3 +59,10 @@ lcws --help
 
 # Demo
 ![a](https://i.imgur.com/8liGxf8.gif)
+
+# Future Work
+* [ ] Accept submission url in this form: (`https://leetcode.com/submissions/detail/<submission-id>/`)
+
+* [ ] Handle duplicate files (replace, merge, add new)
+
+* [ ] Support Codeforces (and come up with a new repo name :D)
