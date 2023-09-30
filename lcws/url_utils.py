@@ -20,7 +20,10 @@ def match_url(pattern: str, url: str):
 
 
 def validate_url(url: str | None):
-    if url is None or requests.get(url).status_code != requests.codes.OK:
+    try:
+        res = requests.get(url)  # type: ignore
+        res.raise_for_status()
+    except:
         raise ClickException("Invalid problem url.")
 
 

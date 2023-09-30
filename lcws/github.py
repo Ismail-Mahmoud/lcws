@@ -31,6 +31,7 @@ def get_head_ref() -> SHA:
     """Return the head reference of the branch (last commit SHA)."""
     url = "/".join([BASE_URL, OWNER, REPO, "git/refs/heads", BRANCH])
     res = requests.get(url)
+    res.raise_for_status()
     return res.json()["object"]["sha"]
 
 
@@ -54,6 +55,7 @@ def create_tree(content: str, filename: str, base_tree: SHA) -> SHA:
         }]
     }
     res = requests.post(url, data=json.dumps(data), headers=HEADERS)
+    res.raise_for_status()
     return res.json()["sha"]
 
 
@@ -73,10 +75,11 @@ def create_commit(commit_message: str, tree: SHA, parent: SHA) -> tuple[SHA, str
         "parents": [parent],
     }
     res = requests.post(url, data=json.dumps(data), headers=HEADERS)
+    res.raise_for_status()
     return res.json()["sha"], res.json()["html_url"]
 
 
-def update_head_ref(new_ref: SHA) -> None:
+def update_head_ref(new_ref: SHA) -> SHA:
     """Update the head reference of the branch to point to the new commit.
 
     :param new_ref: the new commit SHA
@@ -85,7 +88,9 @@ def update_head_ref(new_ref: SHA) -> None:
     data = {
         "sha": new_ref
     }
-    requests.patch(url, data=json.dumps(data), headers=HEADERS)
+    res = requests.patch(url, data=json.dumps(data), headers=HEADERS)
+    res.raise_for_status()
+    return res.json()["object"]["sha"]
 
 
 def upload_to_github(solution: str, filename: str, commit_message: str) -> str:
