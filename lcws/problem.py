@@ -17,13 +17,17 @@ class Problem:
     @property
     def solution_filename(self):
         _id, *words = self.title.split()
-        file_ext = languages[self.solution_language]["file_extension"]
+        file_ext = languages.get(self.solution_language, {})\
+                            .get("file_extension", "")
         return f"{_id}{'-'.join(words)}{file_ext}"
 
     @property
     def solution_file_content(self):
-        comment_symbol = languages[self.solution_language]["comment_symbol"]
-        return f"{comment_symbol} {self.url}\n\n{self.solution_code}\n"
+        comment_symbol = languages.get(self.solution_language, {})\
+                                  .get("comment_symbol", "")
+        file_content = f"{comment_symbol} {self.url}\n\n" if comment_symbol else ""
+        file_content += f"{self.solution_code}\n"
+        return file_content
 
     @property
     def _id(self):
