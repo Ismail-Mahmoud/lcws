@@ -102,8 +102,6 @@ def upload_to_github(solution: str, filename: str, commit_message: str) -> str:
 
     :return: URL of the new commit
     """
-    solution += "\n"
-
     try:
         head_ref = get_head_ref()
     except:

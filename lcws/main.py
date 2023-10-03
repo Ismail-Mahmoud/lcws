@@ -70,7 +70,7 @@ def cli(url, browser, show, timeout, problem_url, submission_url):
 
     with console.status(f"{STATUS_STYLE}Uploading solution to Github...") as s:
         commit_url = upload_to_github(
-            problem.solution_code, solution_filename, commit_message)
+            problem.solution_file_content, solution_filename, commit_message)
         console.log("[green]Successfully uploaded to Gitub:", commit_url)
 
 

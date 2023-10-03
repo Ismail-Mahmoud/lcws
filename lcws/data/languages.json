@@ -1,0 +1,90 @@
+{
+    "Bash": {
+        "file_extension": ".bash",
+        "comment_symbol": "#"
+    },
+    "C": {
+        "file_extension": ".c",
+        "comment_symbol": "//"
+    },
+    "C#": {
+        "file_extension": ".cs",
+        "comment_symbol": "//"
+    },
+    "C++": {
+        "file_extension": ".cpp",
+        "comment_symbol": "//"
+    },
+    "Dart": {
+        "file_extension": ".dart",
+        "comment_symbol": "//"
+    },
+    "Go": {
+        "file_extension": ".go",
+        "comment_symbol": "//"
+    },
+    "Java": {
+        "file_extension": ".java",
+        "comment_symbol": "//"
+    },
+    "JavaScript": {
+        "file_extension": ".js",
+        "comment_symbol": "//"
+    },
+    "Javascript": {
+        "file_extension": ".js",
+        "comment_symbol": "//"
+    },
+    "Kotlin": {
+        "file_extension": ".kt",
+        "comment_symbol": "//"
+    },
+    "MS SQL Server": {
+        "file_extension": ".sql",
+        "comment_symbol": "--"
+    },
+    "MySQL": {
+        "file_extension": ".sql",
+        "comment_symbol": "--"
+    },
+    "Oracle": {
+        "file_extension": ".sql",
+        "comment_symbol": "--"
+    },
+    "PHP": {
+        "file_extension": ".php",
+        "comment_symbol": "//"
+    },
+    "Pandas": {
+        "file_extension": ".py",
+        "comment_symbol": "#"
+    },
+    "Python": {
+        "file_extension": ".py",
+        "comment_symbol": "#"
+    },
+    "Python3": {
+        "file_extension": ".py",
+        "comment_symbol": "#"
+    },
+    "Ruby": {
+        "file_extension": ".rb",
+        "comment_symbol": "#"
+    },
+    "Rust": {
+        "file_extension": ".rs",
+        "comment_symbol": "//"
+    },
+    "Scala": {
+        "file_extension": ".scala",
+        "comment_symbol": "//"
+    },
+    "Swift": {
+        "file_extension": ".swift",
+        "comment_symbol": "//"
+    },
+    "TypeScript": {
+        "file_extension": ".ts",
+        "comment_symbol": "//"
+    }
+}
